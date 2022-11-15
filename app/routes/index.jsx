@@ -1,11 +1,11 @@
 import { Link } from "@remix-run/react";
-import { Layout } from "~/components/layout/layout";
+import { HomeSlider } from "~/components/slickSlider/homeslider";
 
 export default function Index() {
   return (
     <>
       <div>
-        <div>Slider here</div>
+        <HomeSlider />
       </div>
     </>
   );
