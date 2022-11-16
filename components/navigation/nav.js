@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
-import { Logo } from "../logo/Logo";
+import { Logo } from "../logo/logo";
 import { Navitems } from "./navitems/navitems";
 import menuAlt04 from "@iconify/icons-ci/menu-alt-04";
 
