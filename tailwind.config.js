@@ -13,6 +13,7 @@ module.exports = {
         primary: "#1F1839",
         secondary: "#DEC918",
         accent: "#0074A8",
+        pagesbg: "#F6F8F9"
       },
       fontFamily: {
         montserrat: ["montserrat", "sans-serif"],
