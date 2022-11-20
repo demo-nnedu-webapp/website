@@ -36,7 +36,7 @@ export const UiBlog = () => {
     <>
       {dataItems.map((i, index) => {
         return (
-          <Link href="/about" passHref legacyBehavior>
+          <Link href="/about" key={index} passHref legacyBehavior>
             <a
               className="flex flex-col gap-4 w-full shadow-md hover:shadow-accent
              hover:scale-105 duration-500 ease-in-out transition-all"
