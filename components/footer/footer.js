@@ -6,7 +6,7 @@ import { Logo } from "../logo/logo";
 export const Footer = () => {
   return (
     <>
-      <footer className="bg-accent relative p-4 flex flex-col gap-8 items-center justify-center h-[58rem] md:h-[28rem]">
+      <footer className="bg-accent relative px-6 p-4 lg:p-4 flex flex-col gap-8 items-center justify-center h-[58rem] md:h-[28rem]">
         <div className="w-full max-w-[70rem]">
           <div className="grid grid-cols-1 md:grid-cols-8 gap-y-8 lg:gap-4">
             <div className="col-span-2 w-full">
