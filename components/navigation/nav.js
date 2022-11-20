@@ -19,26 +19,28 @@ export const Navbar = () => {
         className="fixed top-0 bg-white left-0 h-[63px] 
       px-6 py-2 z-[100] flex w-full items-center justify-center shadow-md"
       >
-        <div className="w-full flex justify-between items-center">
-          <div>
-            <Logo width={180} height={50} />
-          </div>
-
-          <div className="flex gap-4 items-center">
-            <div className="hidden lg:flex items-center gap-x-5">
-              <Navitems />
+        <div className="w-full max-w-[70rem]">
+          <div className="w-full flex justify-between items-center">
+            <div>
+              <Logo width={180} height={50} />
             </div>
-            <button
-              className="lg:hidden flex"
-              onClick={() => toggleMobileMenu()}
-            >
-              <Icon
-                icon={menuAlt04}
-                width={30}
-                height={30}
-                className="text-primary"
-              />
-            </button>
+
+            <div className="flex gap-4 items-center">
+              <div className="hidden lg:flex items-center gap-x-5">
+                <Navitems />
+              </div>
+              <button
+                className="lg:hidden flex"
+                onClick={() => toggleMobileMenu()}
+              >
+                <Icon
+                  icon={menuAlt04}
+                  width={30}
+                  height={30}
+                  className="text-primary"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </nav>
