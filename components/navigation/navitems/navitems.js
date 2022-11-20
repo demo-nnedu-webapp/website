@@ -51,7 +51,7 @@ export const Navitems = () => {
       label: "blog",
     },
     {
-      link: "#",
+      link: "/contact",
       label: "contact",
     },
   ];
