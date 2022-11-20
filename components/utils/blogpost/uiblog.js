@@ -30,35 +30,34 @@ export const UiBlog = () => {
     },
   ];
 
+  const date = new Date().toJSON().slice(0, 10);
+
   return (
     <>
       {dataItems.map((i, index) => {
         return (
-          <div
-            className="flex w-full shadow-md bg-white flex-col h-full hover:scale-105 hover:border-b-4 border-secondary ease-in-out 
-          duration-500"
-            key={index}
-          >
-            <Link href="/about" passHref legacyBehavior>
-              <a>
-                <Image
-                  src={i.image}
-                  alt={i.image.toString()}
-                  layout="intrinsic"
-                />
-                <div className="bg-white px-4 py-6 flex flex-col gap-x-4 gap-y-3">
-                  <h3 className="font-mono text-lg tracking-[0.06em] font-semibold text-primary">
+          <Link href="/about" key={index} passHref legacyBehavior>
+            <a
+              className="flex flex-col gap-4 w-full shadow-md hover:shadow-accent
+             hover:scale-105 duration-500 ease-in-out transition-all"
+            >
+              <Image src={i.image} />
+              <div className="bg-white text-primary hover:text-accent p-4 flex flex-col gap-4">
+                <div className="flex justify-between gap-4 items-center">
+                  <h3 className="font-inter w-fit font-semibold text-xl tracking-[0.06em]">
                     {i.heading}
                   </h3>
-                  <p className="font-montserrat text-base text-primary tracking-[0.06em]">
-                    {i.excerpt}
-                  </p>
+                  <p className="font-inter w-fit text-sm">{date}</p>
                 </div>
-              </a>
-            </Link>
-          </div>
+                <p className="font-montserrat text-[15px] font-normal tracking-[0.06em]">
+                  {i.excerpt}
+                </p>
+              </div>
+            </a>
+          </Link>
         );
       })}
+      <div></div>
     </>
   );
 };
