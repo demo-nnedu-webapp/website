@@ -11,6 +11,7 @@ import CNS from "../assets/cns.png";
 import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
 import { UiBlog } from "../components/utils/blogpost/uiblog";
+import { FAQ } from "../components/utils/faq/faq";
 
 export default function Home() {
   return (
@@ -103,7 +104,7 @@ export default function Home() {
 
         {/* mission */}
         <div className="w-full max-w-[1440px]">
-          <div className="bg-accent h-[36rem] flex items-center justify-center">
+          <div className="bg-accent lg:h-[36rem] flex items-center justify-center">
             <div className="p-4 w-full grid-cols-1 grid md:grid-cols-9">
               <div className="flex items-center justify-center p-3 col-span-2 h-full">
                 <Image
@@ -190,10 +191,10 @@ export default function Home() {
         {/* establishment */}
 
         {/* Training support */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center my-6">
           <div className="w-full max-w-[1440px] flex justify-center">
-            <div className="bg-primary grid md:grid-cols-2 w-full">
-              <div className="flex justify-center h-full bg-white w-full">
+            <div className="bg-primary p-4 grid md:grid-cols-2 w-full">
+              <div className="flex justify-center h-full w-full">
                 <div className="h-full w-full">
                   <video
                     src="/nnms.mp4"
@@ -230,20 +231,38 @@ export default function Home() {
         </div>
         {/* Training support */}
 
-        <div className="w-full flex items-center h-full justify-center bg-[url('../assets/background-blog.svg')] bg-cover bg-left-top md:bg-center bg-no-repeat">
+        {/* blog */}
+        <div className="w-full flex my-6 md:my-10 items-center h-full justify-center">
           <div className="w-full max-w-[1440px]">
             <div className="w-full flex justify-center">
-              <div className="w-full max-w-[70rem] p-5 flex items-center justify-center flex-col">
+              <div className="w-full max-w-[75rem] p-5 flex items-center justify-center flex-col">
                 <h2
-                  className="font-inter text-2xl font-bold border-b-2 border-secondary tracking-[0.06em] 
-                text-center capitalize leading-8 text-white"
+                  className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
+                text-center capitalize leading-8 text-primary"
                 >
                   Blog
                 </h2>
-                <div className="mt-12 grid md:grid-cols-3 gap-6 w-full">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
                   <UiBlog />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        {/* blog */}
+
+        {/* FAQ */}
+        <div className="lg:mt-12 w-full max-w-[1440px]">
+          <div className="flex flex-col items-center justify-center h-[30rem] md:h-[28rem] bg-secondary p-4">
+            <h2
+              className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
+                text-center capitalize leading-8 text-primary"
+            >
+              {" "}
+              Frequently Asked Questions
+            </h2>
+            <div className="mt-8 flex justify-center items-center">
+              <FAQ />
             </div>
           </div>
         </div>
