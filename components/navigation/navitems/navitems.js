@@ -5,18 +5,8 @@ import Link from "next/link";
 export const Navitems = () => {
   const items = [
     {
-      link: "#",
+      link: "/about",
       label: "the directorate",
-      subItems: [
-        {
-          link: "/thedirectorate",
-          label: "the directorate",
-        },
-        {
-          link: "/pastdirectors",
-          label: "pastdirectors",
-        },
-      ],
     },
     {
       link: "/school",

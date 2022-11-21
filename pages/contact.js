@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import MapNNEDU from "../components/utils/map/map";
-import Image from "next/legacy/image";
 
 const Contact = () => {
   return (
