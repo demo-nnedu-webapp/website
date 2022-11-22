@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import MapNNEDU from "../components/utils/map/map";
-import Image from "next/legacy/image";
+import { SocialMedia } from "../components/utils/socials/social";
 
 const Contact = () => {
   return (
@@ -15,6 +15,13 @@ const Contact = () => {
         {/* map component */}
         <div>
           <MapNNEDU />
+        </div>
+        <div className="w-full max-w-[1440px] z-50">
+          <div className="bg-primary p-4 h-20 flex justify-center items-center">
+            <div className="w-full flex items-center justify-between max-w-[70rem]">
+              <SocialMedia />
+            </div>
+          </div>
         </div>
       </div>
     </div>
