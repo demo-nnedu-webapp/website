@@ -38,7 +38,7 @@ export const FAQ = () => {
             </h3>
           }
         >
-          <p className="font-montserrat tracking-[0.06em] font-normal">
+          <p className="font-montserrat tracking-[0.06em] font-medium">
             {text}
           </p>
         </Panel>
@@ -51,7 +51,7 @@ export const FAQ = () => {
             </h3>
           }
         >
-          <p className="font-montserrat tracking-[0.06em] font-normal">
+          <p className="font-montserrat tracking-[0.06em] font-medium">
             {text}
           </p>
         </Panel>
@@ -64,7 +64,20 @@ export const FAQ = () => {
             </h3>
           }
         >
-          <p className="font-montserrat tracking-[0.06em] font-normal">
+          <p className="font-montserrat tracking-[0.06em] font-medium">
+            {text}
+          </p>
+        </Panel>
+        <Panel
+          key={4}
+          className="bg-accent"
+          header={
+            <h3 className="text-white">
+              How many schools does the NNEDU have?
+            </h3>
+          }
+        >
+          <p className="font-montserrat tracking-[0.06em] font-medium">
             {text}
           </p>
         </Panel>
