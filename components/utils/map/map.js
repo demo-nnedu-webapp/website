@@ -1,7 +1,6 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Icon } from "@iconify/react";
-import styled from "styled-components";
 
 export default function Map() {
   const defaultProps = {
@@ -22,7 +21,7 @@ export default function Map() {
   return (
     <>
       <GoogleMapReact
-        style={{ height: "28rem", width: "100%" }}
+        style={{ height: "30rem", width: "100%" }}
         bootstrapURLKeys={{
           key: "AIzaSyBjRQMhN-3q-BF-5c2Yzfq5XwEDsqLOBOQ",
           libraries: ["places"],
