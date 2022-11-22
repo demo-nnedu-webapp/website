@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React from "react";
 
@@ -6,17 +7,19 @@ const SocialMedia = () => {
     {
       link: "/",
       label: "Facebook",
-      icon: "",
+      icon: <Icon icon="ant-design:facebook-filled" width="28" height="28" />,
     },
     {
       link: "/",
       label: "Instagram",
-      icon: "",
+      icon: <Icon icon="ant-design:instagram-filled" width="28" height="28" />,
     },
     {
       link: "/",
       label: "Twitter",
-      icon: "",
+      icon: (
+        <Icon icon="ant-design:twitter-circle-filled" width="28" height="28" />
+      ),
     },
   ];
   return (
@@ -25,7 +28,13 @@ const SocialMedia = () => {
         return (
           <div key={index}>
             <Link href={i.link} passHref legacyBehavior>
-              <a className="flex items-center gap-4">{i.icon}{i.label}</a>
+              <a
+                className="flex items-center gap-x-2 text-primary
+               font-montserrat tracking-[0.06em] hover:text-secondary font-medium"
+              >
+                {i.icon}
+                {i.label}
+              </a>
             </Link>
           </div>
         );
