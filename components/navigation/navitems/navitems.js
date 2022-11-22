@@ -11,20 +11,6 @@ export const Navitems = () => {
     {
       link: "/school",
       label: "schools",
-      subItems: [
-        {
-          link: "/primary",
-          label: "primary",
-        },
-        {
-          link: "/secondary",
-          label: "secondary",
-        },
-        {
-          link: "/millitary",
-          label: "millitary",
-        },
-      ],
     },
     {
       link: "#",
@@ -37,7 +23,7 @@ export const Navitems = () => {
       ],
     },
     {
-      link: "#",
+      link: "/blog",
       label: "blog",
     },
     {
