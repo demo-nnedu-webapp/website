@@ -55,7 +55,7 @@ export const SecondarySchool = () => {
       >
         {schoolData.map((i, index) => {
           return (
-            <div>
+            <div key={index}>
               <div>
                 <Image
                   src={i.logo}
