@@ -44,14 +44,14 @@ export const UiBlog = () => {
               <Image src={i.image} />
               <div className="bg-white text-primary hover:text-accent p-4 flex flex-col gap-4">
                 <div className="flex justify-between gap-4 items-center">
-                  <h3 className="font-inter w-fit font-semibold text-xl tracking-[0.06em]">
+                  <h3 className="font-inter w-fit font-semibold text-lg tracking-[0.06em]">
                     {i.heading}
                   </h3>
-                  <p className="font-inter w-fit text-sm">{date}</p>
                 </div>
-                <p className="font-montserrat text-[15px] font-normal tracking-[0.06em]">
+                <p className="font-montserrat font-medium tracking-[0.06em]">
                   {i.excerpt}
                 </p>
+                <p className="font-inter w-fit text-sm">{date}</p>
               </div>
             </a>
           </Link>

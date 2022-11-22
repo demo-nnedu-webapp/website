@@ -47,7 +47,7 @@ export default function Home() {
                     </span>{" "}
                     Education
                   </h2>
-                  <p className="font-montserrat font-normal text-base text-primary w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
+                  <p className="font-montserrat font-medium text-primary w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do t tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exer
@@ -90,7 +90,7 @@ export default function Home() {
                   <h3 className="capitalize text-center w-full md:text-left font-montserrat tracking-[0.06em] text-lg font-medium">
                     hardwork and discipline
                   </h3>
-                  <p className="font-montserrat font-normal text-base w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
+                  <p className="font-montserrat font-medium w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do t tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exer
@@ -119,12 +119,15 @@ export default function Home() {
               <div className="p-3 col-span-5 h-full">
                 <div className="flex flex-col gap-4 items-center justify-center p-4">
                   <h2
-                    className="font-inter text-2xl font-semibold tracking-[0.06em] 
+                    className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 text-center w-full capitalize leading-8 text-white"
                   >
                     Mission
                   </h2>
-                  <p className="font-montserrat w-full text-white tracking-[0.06em] leading-[1.8rem] font-normal text-base text-center">
+                  <p
+                    className="font-montserrat w-full text-white tracking-[0.06em] 
+                  leading-[1.8rem] font-medium text-center"
+                  >
                     Contrary to popular belief, Lorem Ipsum is not simply random
                     text. It has roots in a piece of classical Latin literature
                     from 45 BC, making it over 2000 years old. Richard
@@ -158,7 +161,7 @@ export default function Home() {
               <div className="col-span-3 p-4 flex items-center justify-center">
                 <div className="flex flex-col gap-5">
                   <h2
-                    className="font-inter text-2xl font-semibold tracking-[0.06em] 
+                    className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 md:text-left text-center w-full max-w-md capitalize leading-8 text-primary"
                   >
                     DNED Establishments
@@ -167,7 +170,7 @@ export default function Home() {
                     <EstablishmentSwipe />
                   </div>
                   <p
-                    className="font-montserrat font-normal text-base text-primary 
+                    className="font-montserrat font-medium text-primary 
                   w-full max-w-xl tracking-[0.06em] leading-7 text-center md:text-left"
                   >
                     Contrary to popular belief, Lorem Ipsum is not simply random
@@ -209,13 +212,13 @@ export default function Home() {
               <div className="p-6 md:px-0 md:py-12 h-auto md:h-[36rem] md:p-0 flex items-center justify-center flex-col">
                 <div className="md:w-3/4 flex flex-col justify-center gap-4">
                   <h2
-                    className="text-white font-inter text-2xl font-semibold tracking-[0.06em] 
+                    className="text-white font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 md:text-left text-center w-full max-w-md capitalize leading-8"
                   >
                     Training Support
                   </h2>
                   <p
-                    className="font-montserrat font-normal text-base text-white w-full md:max-w-xl
+                    className="font-montserrat font-medium text-white w-full md:max-w-xl
                    tracking-[0.06em] leading-7 text-center md:text-left"
                   >
                     DNED is a registered training provider with the Nigerian

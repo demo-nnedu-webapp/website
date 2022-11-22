@@ -42,7 +42,7 @@ const School = () => {
         <div className="w-full max-w-[1440px]">
           <div className="bg-white px-6 py-10 w-full flex justify-center items-center">
             <div className="w-full max-w-[70rem]">
-                <SchoolTabs/>
+              <SchoolTabs />
             </div>
           </div>
         </div>
