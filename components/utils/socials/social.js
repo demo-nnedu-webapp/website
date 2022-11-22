@@ -23,8 +23,8 @@ const SocialMedia = () => {
     <>
       {socialmediaData.map((i, index) => {
         return (
-          <div>
-            <Link href={i.link} passHref legacyBehavior key={index}>
+          <div key={index}>
+            <Link href={i.link} passHref legacyBehavior>
               <a className="flex items-center gap-4">{i.icon}{i.label}</a>
             </Link>
           </div>
