@@ -237,7 +237,7 @@ export default function Home({ posts }) {
         {/* Training support */}
 
         {/* blog */}
-        {/* <div className="w-full flex my-6 md:my-10 items-center h-full justify-center">
+        <div className="w-full flex my-6 md:my-10 items-center h-full justify-center">
           <div className="w-full max-w-[1440px]">
             <div className="w-full flex justify-center">
               <div className="w-full max-w-[75rem] p-5 flex items-center justify-center flex-col">
@@ -255,7 +255,7 @@ export default function Home({ posts }) {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* blog */}
 
         {/* FAQ */}
