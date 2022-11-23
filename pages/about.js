@@ -37,7 +37,7 @@ const About = () => {
             >
               the directorate
             </h2>
-            <p className="text-base font-montserrat tracking-[0.06em] font-normal text-center leading-7">
+            <p className=" font-montserrat tracking-[0.06em] font-medium text-center leading-7">
               The Directorate of Naval Education is one of the Directorates
               under the Administration Branch and is headed by an Officer of
               <b> Commodore rank</b>. The Directorate has both primary and
@@ -69,7 +69,7 @@ const About = () => {
                 >
                   The Director
                 </h2>
-                <p className="text-base w-full font-montserrat tracking-[0.06em] font-normal text-left leading-7">
+                <p className=" w-full font-montserrat tracking-[0.06em] font-medium text-left leading-7">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do t tempor incididunt ut labore et dolore magna aliqua. Ut
                   enim ad minim veniam, quis nostrud exer

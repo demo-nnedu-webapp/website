@@ -159,12 +159,12 @@ export default function Home({ posts }) {
         {/* establishment */}
         <div className="w-full flex justify-center mt-10 md:my-16">
           <div className="w-full max-w-[1440px] p-4">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-2 md:gap-4">
               <div className="col-span-3 p-4 flex items-center justify-center">
                 <div className="flex flex-col gap-5">
                   <h2
                     className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
-                md:text-left text-center w-full max-w-md capitalize leading-8 text-primary"
+                text-center lg:text-left w-full max-w-md capitalize leading-8 text-primary"
                   >
                     DNED Establishments
                   </h2>
@@ -173,7 +173,7 @@ export default function Home({ posts }) {
                   </div>
                   <p
                     className="font-montserrat font-medium text-primary 
-                  w-full max-w-xl tracking-[0.06em] leading-7 text-center md:text-left"
+                  w-full max-w-xl tracking-[0.06em] leading-7 text-center lg:text-left"
                   >
                     Contrary to popular belief, Lorem Ipsum is not simply random
                     text. It has roots in a piece of classical Latin literature
@@ -198,7 +198,7 @@ export default function Home({ posts }) {
         {/* Training support */}
         <div className="w-full flex justify-center py-6">
           <div className="w-full max-w-[1440px] flex justify-center">
-            <div className="bg-primary p-4 grid md:grid-cols-2 w-full">
+            <div className="bg-primary p-4 grid lg:grid-cols-2 w-full">
               <div className="flex justify-center h-full w-full">
                 <div className="h-full w-full">
                   <video
@@ -211,17 +211,17 @@ export default function Home({ posts }) {
                   />
                 </div>
               </div>
-              <div className="p-6 md:px-0 md:py-12 h-auto md:h-[36rem] md:p-0 flex items-center justify-center flex-col">
-                <div className="md:w-3/4 flex flex-col justify-center gap-4">
+              <div className="p-6 md:px-0 md:py-12 h-auto lg:h-[36rem] md:p-0 flex items-center justify-center flex-col">
+                <div className="lg:w-3/4 flex flex-col justify-center gap-4">
                   <h2
                     className="text-white font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
-                md:text-left text-center w-full max-w-md capitalize leading-8"
+                lg:text-left text-center w-full lg:max-w-md capitalize leading-8"
                   >
                     Training Support
                   </h2>
                   <p
                     className="font-montserrat font-medium text-white w-full md:max-w-xl
-                   tracking-[0.06em] leading-7 text-center md:text-left"
+                   tracking-[0.06em] leading-7 text-center lg:text-left"
                   >
                     DNED is a registered training provider with the Nigerian
                     Navy. The company provides training to all levels of
@@ -248,7 +248,7 @@ export default function Home({ posts }) {
                   Blog
                 </h2>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
-                  {posts.slice(0,3).map((post) => {
+                  {posts.slice(0, 3).map((post) => {
                     return <UiBlog key={post.uri} post={post} />;
                   })}
                 </div>
