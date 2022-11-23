@@ -26,7 +26,7 @@ export default function Blog({ posts }) {
           </div>
         </div>
 
-        <div className="w-full max-w-[1440px]">
+        {/* <div className="w-full max-w-[1440px]">
           <div className="flex w-full items-center justify-center bg-white h-auto py-10 px-6">
             <div className="w-full max-w-[70rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => {
@@ -34,43 +34,44 @@ export default function Blog({ posts }) {
               })}
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const GET_POSTS = gql`
-    query GetAllPosts {
-      posts {
-        nodes {
-          title
-          uri
-          date
-          excerpt
-          featuredImage {
-            node {
-              id
-              sourceUrl
-              srcSet
-            }
-          }
-        }
-      }
-    }
-  `;
+// export async function getStaticProps() {
+//   const GET_POSTS = gql`
+//     query GetAllPosts {
+//       posts {
+//         nodes {
+//           title
+//           uri
+//           date
+//           excerpt
+//           featuredImage {
+//             node {
+//               id
+//               sourceUrl
+//               srcSet
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `;
 
-  const res = await client.query({
-    query: GET_POSTS,
-  });
-  console.log(res);
+//   const res = await client.query({
+//     query: GET_POSTS,
+//   });
+//   console.log(res);
 
-  const posts = res?.data?.posts?.nodes;
-  console.log(posts);
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+//   const posts = res?.data?.posts?.nodes;
+//   console.log(posts);
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

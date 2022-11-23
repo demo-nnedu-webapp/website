@@ -1,19 +1,21 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
+import { gql } from "@apollo/client";
+import { client } from "../lib/apollo";
 import {
   EstablishmentSwipe,
   HomeSlider,
 } from "../components/utils/slider/slider";
 import { HomeMarquee } from "../components/utils/marqueetext/homeMarquee";
 import { PrimaryButton } from "../components/customButton/customButton";
+import { UiBlog } from "../components/utils/blogpost/uiblog";
+import { FAQ } from "../components/utils/faq/faq";
 
 import CNS from "../assets/cns.png";
 import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
-import { UiBlog } from "../components/utils/blogpost/uiblog";
-import { FAQ } from "../components/utils/faq/faq";
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div className="bg-white">
       <Head>
@@ -246,7 +248,9 @@ export default function Home() {
                   Blog
                 </h2>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
-                  {/* <UiBlog /> */}
+                  {posts.map((post) => {
+                    return <UiBlog key={post.uri} post={post} />;
+                  })}
                 </div>
               </div>
             </div>
@@ -272,4 +276,39 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const GET_POSTS = gql`
+    query GetAllPosts {
+      posts {
+        nodes {
+          title
+          uri
+          date
+          excerpt
+          featuredImage {
+            node {
+              id
+              sourceUrl
+              srcSet
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const res = await client.query({
+    query: GET_POSTS,
+  });
+  console.log(res);
+
+  const posts = res?.data?.posts?.nodes;
+  console.log(posts);
+  return {
+    props: {
+      posts,
+    },
+  };
 }
