@@ -164,7 +164,7 @@ export default function Home({ posts }) {
                 <div className="flex flex-col gap-5">
                   <h2
                     className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
-                text-center lg:text-left w-full max-w-md capitalize leading-8 text-primary"
+                text-center lg:text-left w-full lg:max-w-md capitalize leading-8 text-primary"
                   >
                     DNED Establishments
                   </h2>
