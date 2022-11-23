@@ -196,7 +196,7 @@ export default function Home({ posts }) {
         {/* establishment */}
 
         {/* Training support */}
-        <div className="w-full flex justify-center my-6">
+        <div className="w-full flex justify-center py-6">
           <div className="w-full max-w-[1440px] flex justify-center">
             <div className="bg-primary p-4 grid md:grid-cols-2 w-full">
               <div className="flex justify-center h-full w-full">
@@ -237,7 +237,7 @@ export default function Home({ posts }) {
         {/* Training support */}
 
         {/* blog */}
-        <div className="w-full flex my-6 md:my-10 items-center h-full justify-center">
+        <div className="w-full flex px-2 py-10 items-center h-full justify-center">
           <div className="w-full max-w-[1440px]">
             <div className="w-full flex justify-center">
               <div className="w-full max-w-[75rem] p-5 flex items-center justify-center flex-col">
@@ -247,8 +247,8 @@ export default function Home({ posts }) {
                 >
                   Blog
                 </h2>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
-                  {posts.map((post) => {
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
+                  {posts.slice(0,3).map((post) => {
                     return <UiBlog key={post.uri} post={post} />;
                   })}
                 </div>
@@ -260,7 +260,7 @@ export default function Home({ posts }) {
 
         {/* FAQ */}
         <div className="lg:mt-12 w-full max-w-[1440px]">
-          <div className="flex flex-col items-center justify-center h-[30rem] md:h-[28rem] bg-secondary p-4">
+          <div className="flex px-6 flex-col py-10 items-center justify-center h-[36rem] md:h-[28rem] bg-secondary">
             <h2
               className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 text-center capitalize leading-8 text-primary"
