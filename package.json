@@ -22,7 +22,9 @@
     "react-easy-marquee": "^1.2.4",
     "react-player": "^2.11.0",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.4",
+    "@apollo/client": "3.7.1",
+    "graphql": "16.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
