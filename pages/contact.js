@@ -15,7 +15,7 @@ const Contact = () => {
       </Head>
       <div className="flex flex-col w-full items-center justify-center">
         {/* map component */}
-        <div className="h-[30rem] relative w-full">
+        <div id="map" className="h-[30rem] relative w-full">
           <MapNNEDU />
         </div>
         {/* map component */}
