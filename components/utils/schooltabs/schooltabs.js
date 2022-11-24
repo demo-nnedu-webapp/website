@@ -52,17 +52,17 @@ export const SchoolTabs = () => {
           {
             label: "Nigerian Navy Primary School",
             key: "nnps",
-            children: <PrimarySchool/>,
+            children: <PrimarySchool />,
           },
           {
             label: "Nigerian Navy Secondary School",
             key: "nnss",
-            children: <SecondarySchool/>,
+            children: <SecondarySchool />,
           },
           {
             label: "Nigerian Navy Millitary School",
             key: "nnms",
-            children: <MillitarySchool/>,
+            children: <MillitarySchool />,
           },
         ]}
       ></CustomTabs>

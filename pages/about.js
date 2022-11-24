@@ -89,13 +89,12 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-[1440px]">
+        <div className="w-full max-w-[1440px]" id="pastdirectors">
           <div className="flex p-4 items-center justify-center h-auto md:h-[58rem]">
             <div className="w-full p-4 max-w-[70rem] flex flex-col">
               <h2
                 className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 text-center md:text-left capitalize leading-8 text-primary"
-                id="#pastdirectors"
               >
                 Past Directors
               </h2>
