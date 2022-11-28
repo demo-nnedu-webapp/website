@@ -23,6 +23,10 @@ export const Navitems = () => {
       ],
     },
     {
+      link: "/#gallery",
+      label: "gallery"
+    },
+    {
       link: "/blog",
       label: "blog",
     },

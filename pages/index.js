@@ -14,6 +14,7 @@ import { FAQ } from "../components/utils/faq/faq";
 import CNS from "../assets/cns.png";
 import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
+import { Gallery } from "../components/utils/gallery/gallery";
 
 export default function Home({ posts }) {
   return (
@@ -44,9 +45,7 @@ export default function Home({ posts }) {
                 md:text-left text-center w-full max-w-md capitalize leading-8 text-primary"
                   >
                     Welcome to the{" "}
-                    <span className="text-primary border-b-4 border-secondary">
-                      directorate of Naval
-                    </span>{" "}
+                    <span className="text-primary">Directorate of Naval</span>{" "}
                     Education
                   </h2>
                   <p className="font-montserrat font-medium text-primary w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
@@ -236,20 +235,45 @@ export default function Home({ posts }) {
         </div>
         {/* Training support */}
 
+        {/* Gallery */}
+        <div className="w-full px-6 flex justify-center mt-6" id="gallery">
+          <div className="w-full max-w-[1440px]">
+            <div className="w-full flex justify-center">
+              <div className="w-full max-w-[70rem] p-5 flex flex-col gap-4 items-center justify-center">
+                <h2
+                  className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
+                text-left capitalize leading-8 text-primary w-full"
+                >
+                  Gallery
+                </h2>
+
+                <div className="mt-4 w-full">
+                  <Gallery />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Gallery */}
+
         {/* blog */}
         <div className="w-full flex px-2 py-10 items-center h-full justify-center">
           <div className="w-full max-w-[1440px]">
             <div className="w-full flex justify-center">
-              <div className="w-full max-w-[75rem] p-5 flex items-center justify-center flex-col">
+              <div className="w-full max-w-[70rem] p-5 flex items-center justify-center flex-col">
                 <h2
                   className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
-                text-center capitalize leading-8 text-primary"
+                text-left w-full capitalize leading-8 text-primary"
                 >
                   Blog
                 </h2>
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full h-full">
                   {posts.slice(0, 3).map((post) => {
-                    return <UiBlog key={post.uri} post={post} />;
+                    return (
+                      <div className="">
+                        <UiBlog key={post.uri} post={post} />
+                      </div>
+                    );
                   })}
                 </div>
               </div>
