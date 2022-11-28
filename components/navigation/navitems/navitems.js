@@ -24,7 +24,7 @@ export const Navitems = () => {
     },
     {
       link: "/#gallery",
-      label: "gallery"
+      label: "gallery",
     },
     {
       link: "/blog",
@@ -42,7 +42,7 @@ export const Navitems = () => {
     <>
       {items.map((i, index) => {
         return (
-          <Link href={i.link} key={index} passHref legacyBehavior>
+          <Link href={i.link} key={index} passHref legacyBehavior scroll={true}>
             <a
               className={`${
                 router.asPath === i.link
