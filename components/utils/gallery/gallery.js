@@ -47,23 +47,23 @@ export const Gallery = () => {
     const photo = photos.slice(0, 3);
     setImages(photo);
 
-    const ctx = gsap.context(() => {
-      // Target the two specific elements we have asigned the animate class
-      gsap.timeline({
-        paused: true,
-        defaults: {
-          duration: 3,
-        }
-      }).from("animate", {
-        x: 0,
-        opacity: 0
-      }).to("animate", {
-        x: 50,
-        opacity: 100
-      })
-    }, app); // <- Scope!
+    // const ctx = gsap.context(() => {
+    //   // Target the two specific elements we have asigned the animate class
+    //   gsap.timeline({
+    //     paused: true,
+    //     defaults: {
+    //       duration: 3,
+    //     }
+    //   }).from("animate", {
+    //     x: 0,
+    //     opacity: 0
+    //   }).to("animate", {
+    //     x: 50,
+    //     opacity: 100
+    //   })
+    // }, app); 
 
-    return () => ctx.revert();
+    // return () => ctx.revert();
   }, []);
 
 
@@ -75,7 +75,6 @@ export const Gallery = () => {
 
   return (
     <>
-    <div ref={app}>
       <PhotoAlbum
         targetRowHeight={150}
         layout="masonry"
@@ -84,7 +83,7 @@ export const Gallery = () => {
         onClick={(event, photo, index) => setIndex(index)}
       />
       <div className="mt-8">
-        <PrimaryButton className="animate" onClick={() => setImages(photos)}>
+        <PrimaryButton onClick={() => setImages(photos)}>
           Load more
         </PrimaryButton>
       </div>
@@ -95,7 +94,6 @@ export const Gallery = () => {
         close={() => setIndex(-1)}
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
       />
-      </div>
     </>
   );
 };
