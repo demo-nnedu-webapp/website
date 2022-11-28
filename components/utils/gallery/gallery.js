@@ -18,21 +18,25 @@ export const Gallery = () => {
   const app = useRef();
   const photos = [
     {
+      id: "1",
       src: "/1.jpeg",
       width: 800,
       height: 450,
     },
     {
+      id: "2",
       src: "/2.jpeg",
       width: 800,
       height: 450,
     },
     {
+      id: "3",
       src: "/3.png",
       width: 800,
       height: 450,
     },
     {
+      id: "4",
       src: "/4.jpeg",
       width: 800,
       height: 450,
@@ -46,28 +50,10 @@ export const Gallery = () => {
   useEffect(() => {
     const photo = photos.slice(0, 3);
     setImages(photo);
-
-    // const ctx = gsap.context(() => {
-    //   // Target the two specific elements we have asigned the animate class
-    //   gsap.timeline({
-    //     paused: true,
-    //     defaults: {
-    //       duration: 3,
-    //     }
-    //   }).from("animate", {
-    //     x: 0,
-    //     opacity: 0
-    //   }).to("animate", {
-    //     x: 50,
-    //     opacity: 100
-    //   })
-    // }, app); 
-
-    // return () => ctx.revert();
   }, []);
 
-
-  const slides = images.map(({ src, width, height }) => ({
+  const slides = images.map(({ src, width, height, id }) => ({
+    id,
     src,
     width,
     height,

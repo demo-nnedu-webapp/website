@@ -269,11 +269,7 @@ export default function Home({ posts }) {
                 </h2>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-6 w-full h-full">
                   {posts.slice(0, 3).map((post) => {
-                    return (
-                      <div className="">
-                        <UiBlog key={post.uri} post={post} />
-                      </div>
-                    );
+                    return <UiBlog key={post.uri} post={post} />;
                   })}
                 </div>
               </div>
