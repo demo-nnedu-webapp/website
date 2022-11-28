@@ -7,7 +7,7 @@ export const UiBlog = ({ post }) => {
     <>
       <Link href={post.uri} passHref legacyBehavior>
         <a
-          className="flex flex-col items-center gap-4 w-full shadow-md hover:shadow-accent
+          className="flex flex-col items-center gap-4 w-full shadow-md bg-secondary
              hover:scale-105 duration-500 ease-in-out transition-all"
         >
           {/* <Image
@@ -17,7 +17,7 @@ export const UiBlog = ({ post }) => {
             height={250}
             decoding="async"
           /> */}
-          <div className="bg-white text-primary hover:text-accent p-4 flex flex-col gap-4">
+          <div className="text-primary hover:text-white p-4 flex flex-col gap-4">
             <div className="flex justify-between gap-4 items-center">
               <h3 className="font-inter w-fit font-semibold text-lg tracking-[0.06em]">
                 {post.title}
