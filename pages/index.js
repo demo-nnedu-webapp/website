@@ -15,8 +15,11 @@ import CNS from "../assets/cns.png";
 import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
 import { Gallery } from "../components/utils/gallery/gallery";
+import { motion, useScroll } from "framer-motion";
 
 export default function Home({ posts }) {
+  const { scrollYProgress } = useScroll();
+
   return (
     <div className="bg-white">
       <Head>
@@ -57,27 +60,53 @@ export default function Home({ posts }) {
               </div>
 
               <div className="flex order-first md:order-last items-center md:col-span-2 justify-center md:justify-start">
-                <Image
-                  src={CNS}
-                  alt="cns"
-                  priority={100}
-                  width={305}
-                  height={423}
-                  layout="intrinsic"
-                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 1.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                    type: "tween",
+                    // repeat: 1,
+                    // repeatType: "mirror",
+                  }}
+                >
+                  <Image
+                    src={CNS}
+                    alt="cns"
+                    priority={100}
+                    width={305}
+                    height={423}
+                    layout="intrinsic"
+                  />
+                </motion.div>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-4">
               <div className="flex items-center col-span-2 justify-center md:justify-end">
-                <Image
-                  src={DNED}
-                  alt="cns"
-                  priority={100}
-                  width={305}
-                  height={423}
-                  layout="intrinsic"
-                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 2.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                    type: "spring",
+                    // repeat: 1,
+                    // repeatType: "reverse",
+                  }}
+                >
+                  <Image
+                    src={DNED}
+                    alt="cns"
+                    priority={100}
+                    width={305}
+                    height={423}
+                    layout="intrinsic"
+                  />
+                </motion.div>
               </div>
 
               <div className="p-4 col-span-3 flex items-center justify-center flex-col">
