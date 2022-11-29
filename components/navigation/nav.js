@@ -1,16 +1,21 @@
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
+import React from "react";
 import { Logo } from "../logo/logo";
 import { Navitems } from "./navitems/navitems";
 import menuAlt04 from "@iconify/icons-ci/menu-alt-04";
+import { useDispatch, useSelector } from "react-redux";
+import { showdropdown, hidedropdown } from "../../redux";
 
 export const Navbar = () => {
-  const initialState = false;
-  const [mobilemenu, setMobileMenu] = useState(initialState);
+  const mm = useSelector((state) => state.locationReducer.dropdownMenu);
+  const dispatch = useDispatch();
 
   const toggleMobileMenu = () => {
-    setMobileMenu(() => !mobilemenu);
-    console.log(mobilemenu);
+    if (mm === false) {
+      dispatch(showdropdown(mm));
+    } else {
+      dispatch(hidedropdown(mm));
+    }
   };
 
   return (
@@ -45,11 +50,11 @@ export const Navbar = () => {
         </div>
       </nav>
       <>
-        {mobilemenu && (
+        {mm && (
           <>
             <div
               className="w-full h-auto lg:hidden z-50 fixed bg-white 
-              transition-[.5s] border-b-4 border-secondary top-[4.1rem] left-0"
+              transition-[.5s] border-b-4 border-secondary top-[3.9rem] left-0"
             >
               <div className="flex flex-col gap-4 px-6 p-4">
                 <Navitems />
