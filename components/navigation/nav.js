@@ -53,8 +53,11 @@ export const Navbar = () => {
         {mm && (
           <>
             <div
-              className="w-full h-auto lg:hidden z-50 fixed bg-white 
-              transition-[.5s] border-b-4 border-secondary top-[3.9rem] left-0"
+              className={
+                mm
+                  ? "w-full h-auto lg:hidden z-50 fixed bg-white transition-[.5s] border-b-4 border-secondary transform translate-x-[-100%] top-[3.9rem] left-0 slide-in"
+                  : "slide-out"
+              }
             >
               <div className="flex flex-col gap-4 px-6 p-4">
                 <Navitems />

@@ -12,7 +12,6 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/styles.css";
 
 import { PrimaryButton } from "../../customButton/customButton";
-import { gsap } from "gsap";
 
 export const Gallery = () => {
   const app = useRef();
