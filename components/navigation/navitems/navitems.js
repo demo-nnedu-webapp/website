@@ -1,8 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { hidedropdown } from "../../../redux";
 
 export const Navitems = () => {
+  const dispatch = useDispatch();
+  const mm = useSelector((state) => state.locationReducer.dropdownMenu);
+
   const items = [
     {
       link: "/about",
@@ -13,7 +18,7 @@ export const Navitems = () => {
       label: "schools",
     },
     {
-      link: "#",
+      link: "/admission",
       label: "admissions",
       subItems: [
         {
@@ -49,6 +54,7 @@ export const Navitems = () => {
                   ? "text-secondary hover:underline font-medium"
                   : "text-primary"
               } "font-inter font-normal capitalize my-2 lg:my-0 tracking-[0.06em] hover:text-[#dec918]`}
+              onClick={() => dispatch(hidedropdown(mm))}
             >
               {i.label}
             </a>
