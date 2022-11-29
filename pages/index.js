@@ -67,7 +67,9 @@ export default function Home({ posts }) {
                     duration: 0.8,
                     delay: 1.2,
                     ease: [0, 0.71, 0.2, 1.01],
-                    type: "tween"
+                    type: "tween",
+                    // repeat: 1,
+                    // repeatType: "mirror",
                   }}
                 >
                   <Image
@@ -91,7 +93,9 @@ export default function Home({ posts }) {
                     duration: 0.8,
                     delay: 2.2,
                     ease: [0, 0.71, 0.2, 1.01],
-                    type: "spring"
+                    type: "spring",
+                    // repeat: 1,
+                    // repeatType: "reverse",
                   }}
                 >
                   <Image
