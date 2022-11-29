@@ -18,14 +18,8 @@ export const Navitems = () => {
       label: "schools",
     },
     {
-      link: "/admission",
+      link: "https://nnss-dned.netlify.app",
       label: "admissions",
-      subItems: [
-        {
-          link: "/check",
-          label: "check schools admission",
-        },
-      ],
     },
     {
       link: "/#gallery",
