@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   location: {},
-  dropdownMenu: false
+  dropdownMenu: false,
+  modal: false,
 };
 
 const NeverReducer = createSlice({
@@ -15,8 +16,15 @@ const NeverReducer = createSlice({
     hidedropdown: (state) => {
       state.dropdownMenu = false;
     },
+    showModal: (state) => {
+      state.modal = true;
+    },
+    hideModal: (state) => {
+      state.modal = false;
+    },
   },
 });
 
-export const { showdropdown, hidedropdown } = NeverReducer.actions;
+export const { showdropdown, hidedropdown, showModal, hideModal } =
+  NeverReducer.actions;
 export default NeverReducer.reducer;

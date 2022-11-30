@@ -14,16 +14,22 @@ import { FAQ } from "../components/utils/faq/faq";
 import CNS from "../assets/cns.png";
 import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
-import { Gallery } from "../components/utils/gallery/gallery";
 import { motion, useScroll } from "framer-motion";
 import { lazy, Suspense } from "react";
 import { Icon } from "@iconify/react";
+import { Modals } from "../components/utils/modal/modal";
+import { useDispatch, useSelector } from "react-redux";
+import { hideModal, showModal } from "../redux";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Home({ posts }) {
   const { scrollYProgress } = useScroll();
 
+  const modal = useSelector((state) => state.locationReducer.modal);
+  const dispatch = useDispatch();
   const router = useRouter();
+
 
   const GalleryAlbum = lazy(() =>
     delayForDemo(import("../components/utils/gallery/gallery"))
@@ -39,6 +45,15 @@ export default function Home({ posts }) {
       />
     </div>
   );
+
+  const show = () => {
+    if (modal === false) {
+      dispatch(showModal(modal));
+    } else {
+      dispatch(hideModal(modal));
+    }
+    console.log(modal);
+  };
 
   return (
     <div className="bg-white">
@@ -276,7 +291,7 @@ export default function Home({ posts }) {
                     personnel within the Nigerian Navy, from entry level to
                     senior officers.
                   </p>
-                  <PrimaryButton>Join Now</PrimaryButton>
+                  <PrimaryButton onClick={() => show()}>Join Now</PrimaryButton>
                 </div>
               </div>
             </div>
@@ -345,6 +360,41 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+      {modal && (
+        <Modals
+          title={
+            <h3 className="text-lg font-inter tracking-[0.06em]">
+              Training Support
+            </h3>
+          }
+          open={modal}
+          message={
+            <div className="flex p-4">
+              <div className="w-full flex flex-col gap-4">
+                <h2 className="text-xl font-inter tracking-[0.06em]">
+                  Admission is currently not in progress
+                </h2>
+                <p className="my-4 font-montserrat font-medium tracking-[0.06em]">
+                  You can contact us via email below
+                </p>
+                <Link href="mailto:contact@nnedu.org" passHref legacyBehavior>
+                  <a
+                    className="font-montserrat  tracking-[0.06em]
+                     text-sm text-primary font-medium flex items-center gap-2 hover:text-secondary"
+                  >
+                    <Icon
+                      icon="material-symbols:mail-rounded"
+                      width="20"
+                      height="20"
+                    />
+                    contact@nnedu.org
+                  </a>
+                </Link>
+              </div>
+            </div>
+          }
+        />
+      )}
     </div>
   );
 }
