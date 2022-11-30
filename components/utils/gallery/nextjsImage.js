@@ -15,13 +15,13 @@ const NextJsImage = ({
       }}
     >
       <Image
-        layout="intrinsic"
+        layout="fill"
         src={src}
         alt={alt}
         title={title}
         sizes={sizes}
-        width={500}
-        height={300}
+        // width={500}
+        // height={300}
         className={`${className} cursor-pointer`}
         onClick={onClick}
       />
