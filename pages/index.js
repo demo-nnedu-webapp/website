@@ -21,12 +21,15 @@ import { Modals } from "../components/utils/modal/modal";
 import { useDispatch, useSelector } from "react-redux";
 import { hideModal, showModal } from "../redux";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home({ posts }) {
   const { scrollYProgress } = useScroll();
 
   const modal = useSelector((state) => state.locationReducer.modal);
   const dispatch = useDispatch();
+  const router = useRouter();
+
 
   const GalleryAlbum = lazy(() =>
     delayForDemo(import("../components/utils/gallery/gallery"))
@@ -244,7 +247,7 @@ export default function Home({ posts }) {
                     the cites of the word in classical literature, discovered
                     the undoubtable source.
                   </p>
-                  <PrimaryButton>View All</PrimaryButton>
+                  <PrimaryButton onClick={() => router.replace('/school')}>View All</PrimaryButton>
                 </div>
               </div>
               <div className="col-span-2 p-4 hidden lg:flex items-center justify-center">
