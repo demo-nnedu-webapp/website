@@ -17,7 +17,7 @@ const NeverReducer = createSlice({
       state.dropdownMenu = false;
     },
     showModal: (state) => {
-      state.modal = false;
+      state.modal = true;
     },
     hideModal: (state) => {
       state.modal = false;
