@@ -16,9 +16,26 @@ import DNED from "../assets/dned.png";
 import Navy from "../assets/navy-logo.png";
 import { Gallery } from "../components/utils/gallery/gallery";
 import { motion, useScroll } from "framer-motion";
+import { lazy, Suspense } from "react";
+import { Icon } from "@iconify/react";
 
 export default function Home({ posts }) {
   const { scrollYProgress } = useScroll();
+
+  const GalleryAlbum = lazy(() =>
+    delayForDemo(import("../components/utils/gallery/gallery"))
+  );
+
+  const Loading = (
+    <div className="flex items-center justify-center">
+      <Icon
+        icon="line-md:loading-twotone-loop"
+        className="text-primary"
+        width="36"
+        height="36"
+      />
+    </div>
+  );
 
   return (
     <div className="bg-white">
@@ -277,7 +294,9 @@ export default function Home({ posts }) {
                 </h2>
 
                 <div className="mt-4 w-full">
-                  <Gallery />
+                  <Suspense fallback={Loading}>
+                    <GalleryAlbum />
+                  </Suspense>
                 </div>
               </div>
             </div>
@@ -325,6 +344,13 @@ export default function Home({ posts }) {
       </div>
     </div>
   );
+}
+
+async function delayForDemo(promise) {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 2000);
+  });
+  return promise;
 }
 
 export async function getStaticProps() {

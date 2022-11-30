@@ -13,7 +13,7 @@ import "yet-another-react-lightbox/styles.css";
 
 import { PrimaryButton } from "../../customButton/customButton";
 
-export const Gallery = () => {
+export default function Gallery() {
   const app = useRef();
   const photos = [
     {
@@ -81,4 +81,4 @@ export const Gallery = () => {
       />
     </>
   );
-};
+}
