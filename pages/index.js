@@ -18,9 +18,12 @@ import { Gallery } from "../components/utils/gallery/gallery";
 import { motion, useScroll } from "framer-motion";
 import { lazy, Suspense } from "react";
 import { Icon } from "@iconify/react";
+import { useRouter } from "next/router";
 
 export default function Home({ posts }) {
   const { scrollYProgress } = useScroll();
+
+  const router = useRouter();
 
   const GalleryAlbum = lazy(() =>
     delayForDemo(import("../components/utils/gallery/gallery"))
@@ -229,7 +232,7 @@ export default function Home({ posts }) {
                     the cites of the word in classical literature, discovered
                     the undoubtable source.
                   </p>
-                  <PrimaryButton>View All</PrimaryButton>
+                  <PrimaryButton onClick={() => router.replace('/school')}>View All</PrimaryButton>
                 </div>
               </div>
               <div className="col-span-2 p-4 hidden lg:flex items-center justify-center">
