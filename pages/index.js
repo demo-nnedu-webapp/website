@@ -158,7 +158,7 @@ export default function Home({ posts }) {
                   <p className="font-montserrat font-medium w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
                     To train and educate the youth of Nigeria on the importance
                     of education and how it can be used to positively impact
-                    one's life and community in general.
+                    one&apos;s life and community in general.
                   </p>
                 </div>
               </div>
@@ -238,14 +238,12 @@ export default function Home({ posts }) {
                     className="font-montserrat font-medium text-primary 
                   w-full max-w-xl tracking-[0.06em] leading-7 text-center lg:text-left"
                   >
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard
-                    McClintock, a Latin professor at Hampden-Sydney College in
-                    Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through
-                    the cites of the word in classical literature, discovered
-                    the undoubtable source.
+                    Nigerian Navy Schools are also available for prospective
+                    officers interested in joining the Nigerian Navy. These
+                    schools provide ample opportunity for students to learn
+                    military discipline and values while they are also taught
+                    practical skills such as navigation, seamanship and
+                    engineering.
                   </p>
                   <PrimaryButton onClick={() => router.replace("/school")}>
                     View All
@@ -273,7 +271,7 @@ export default function Home({ posts }) {
                     Welfare Support
                   </h2>
                   <p
-                    className="font-montserrat font-medium text-primary w-full md:max-w-xl
+                    className="font-montserrat font-medium text-white w-full md:max-w-xl
                    tracking-[0.06em] leading-7 text-center "
                   >
                     The Directorate (DNED) provides comprehensive training and
