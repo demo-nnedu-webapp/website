@@ -6,6 +6,7 @@ import { client } from "../lib/apollo";
 import useScrollRestoration from "../components/utils/useScrollRestoration";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
+import "react-chatbot-kit/build/main.css";
 
 function MyApp({ Component, pageProps, router }) {
   useScrollRestoration(router);

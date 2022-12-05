@@ -30,7 +30,6 @@ export default function Home({ posts }) {
   const dispatch = useDispatch();
   const router = useRouter();
 
-
   const GalleryAlbum = lazy(() =>
     delayForDemo(import("../components/utils/gallery/gallery"))
   );
@@ -87,9 +86,10 @@ export default function Home({ posts }) {
                     Education
                   </h2>
                   <p className="font-montserrat font-medium text-primary w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do t tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exer
+                    The Nigerian Navy is one of the most unique and interesting
+                    institutions in Africa. The training that they provide is
+                    not just an opportunity to learn how to protect your
+                    country, but also a chance to learn about yourself.
                   </p>
                 </div>
               </div>
@@ -156,9 +156,9 @@ export default function Home({ posts }) {
                     hardwork and discipline
                   </h3>
                   <p className="font-montserrat font-medium w-full max-w-lg tracking-[0.06em] leading-7 text-center md:text-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do t tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exer
+                    To train and educate the youth of Nigeria on the importance
+                    of education and how it can be used to positively impact
+                    one&apos;s life and community in general.
                   </p>
                 </div>
               </div>
@@ -193,14 +193,14 @@ export default function Home({ posts }) {
                     className="font-montserrat w-full text-white tracking-[0.06em] 
                   leading-[1.8rem] font-medium text-center"
                   >
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard
-                    McClintock, a Latin professor at Hampden-Sydney College in
-                    Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through
-                    the cites of the word in classical literature, discovered
-                    the undoubtable source.
+                    The Nigerian Navy is committed to providing a quality
+                    education at all levels, from basic training to advanced
+                    education. We are committed to ensuring that our students
+                    have the best chance possible of earning a degree and
+                    starting their careers with us on board or in the Nigerian
+                    Navy. Our goal is to provide quality education and training
+                    to all our cadets so they can succeed in life beyond the
+                    academy.
                   </p>
                 </div>
               </div>
@@ -221,8 +221,8 @@ export default function Home({ posts }) {
 
         {/* establishment */}
         <div className="w-full flex justify-center mt-10 md:my-16">
-          <div className="w-full max-w-[1440px] p-4">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-2 md:gap-4">
+          <div className="w-full max-w-[1440px] flex items-center justify-center p-4">
+            <div className="grid w-full max-w-[75rem] grid-cols-1 lg:grid-cols-5 gap-y-2 md:gap-4">
               <div className="col-span-3 p-4 flex items-center justify-center">
                 <div className="flex flex-col gap-5">
                   <h2
@@ -238,16 +238,16 @@ export default function Home({ posts }) {
                     className="font-montserrat font-medium text-primary 
                   w-full max-w-xl tracking-[0.06em] leading-7 text-center lg:text-left"
                   >
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard
-                    McClintock, a Latin professor at Hampden-Sydney College in
-                    Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through
-                    the cites of the word in classical literature, discovered
-                    the undoubtable source.
+                    Nigerian Navy Schools are also available for prospective
+                    officers interested in joining the Nigerian Navy. These
+                    schools provide ample opportunity for students to learn
+                    military discipline and values while they are also taught
+                    practical skills such as navigation, seamanship and
+                    engineering.
                   </p>
-                  <PrimaryButton onClick={() => router.replace('/school')}>View All</PrimaryButton>
+                  <PrimaryButton onClick={() => router.replace("/school")}>
+                    View All
+                  </PrimaryButton>
                 </div>
               </div>
               <div className="col-span-2 p-4 hidden lg:flex items-center justify-center">
@@ -258,10 +258,46 @@ export default function Home({ posts }) {
         </div>
         {/* establishment */}
 
+        {/* Welfare Support */}
+        <div id="welfaresupport" className="w-full flex justify-center">
+          <div className="w-full max-w-[1440px] backgoundwelfare flex justify-center">
+            <div className=" w-full max-w-[70rem] p-4 flex items-center justify-center">
+              <div className="p-6 md:px-0 md:py-12 h-auto lg:h-[32rem]  md:p-0 flex items-center justify-center flex-col">
+                <div className="flex flex-col items-center justify-center gap-4">
+                  <h2
+                    className="text-primary font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
+                 text-center w-full capitalize leading-8"
+                  >
+                    Welfare Support
+                  </h2>
+                  <p
+                    className="font-montserrat font-medium text-white w-full md:max-w-xl
+                   tracking-[0.06em] leading-7 text-center "
+                  >
+                    The Directorate (DNED) provides comprehensive training and
+                    education to its personnel in order to develop their
+                    knowledge, skills and abilities. The NN conducts regular
+                    training programs for all its personnel at various levels.
+                    The NN has a training system that is designed to develop
+                    professional skills in all its personnel.
+                  </p>
+                  <PrimaryButton
+                    className="bg-primary text-slate-50"
+                    onClick={() => show()}
+                  >
+                    Join Now
+                  </PrimaryButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Welfare Support */}
+
         {/* Training support */}
-        <div className="w-full flex justify-center py-6">
+        <div id="trainingsupport" className="w-full flex justify-center">
           <div className="w-full max-w-[1440px] flex justify-center">
-            <div className="bg-primary p-4 grid lg:grid-cols-2 w-full">
+            <div className="bg-primary grid py-6 lg:grid-cols-2 w-full">
               <div className="flex justify-center h-full w-full">
                 <div className="h-full w-full">
                   <video
@@ -274,7 +310,7 @@ export default function Home({ posts }) {
                   />
                 </div>
               </div>
-              <div className="p-6 md:px-0 md:py-12 h-auto lg:h-[36rem] md:p-0 flex items-center justify-center flex-col">
+              <div className="p-6 md:px-0 md:py-12 h-auto lg:h-[32rem]  md:p-0 flex items-center justify-center flex-col">
                 <div className="lg:w-3/4 flex flex-col justify-center gap-4">
                   <h2
                     className="text-white font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
@@ -346,7 +382,7 @@ export default function Home({ posts }) {
 
         {/* FAQ */}
         <div className="lg:mt-12 w-full max-w-[1440px]">
-          <div className="flex px-6 flex-col py-10 items-center justify-center h-[36rem] md:h-[28rem] bg-secondary">
+          <div className="flex px-6 flex-col py-10 items-center justify-center h-auto bg-secondary">
             <h2
               className="font-inter text-2xl md:text-3xl font-bold tracking-[0.06em] 
                 text-center capitalize leading-8 text-primary"
@@ -364,7 +400,7 @@ export default function Home({ posts }) {
         <Modals
           title={
             <h3 className="text-lg font-inter tracking-[0.06em]">
-              Training Support
+              Training Support & Welfare Support
             </h3>
           }
           open={modal}

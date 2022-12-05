@@ -5,6 +5,7 @@ import Image from "next/legacy/image";
 import Navy from "../assets/navy-logo.png";
 import DNED from "../assets/dned.png";
 import { PastDirectors } from "../components/utils/pastdirectors/pastDirectors";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -41,9 +42,19 @@ const About = () => {
               The Directorate of Naval Education is one of the Directorates
               under the Administration Branch and is headed by an Officer of
               <b> Commodore rank</b>. The Directorate has both primary and
-              secondary roles. The primary role of the Directorate is in
-              training support while its secondary role is in welfare support.
-              In the training support role, it develops the academic and
+              secondary roles. The primary role of the Directorate is in{" "}
+              <Link href="/#trainingsupport" scroll={true} legacyBehavior>
+                <a className="text-secondary font-semibold hover:text-accent">
+                  Training support
+                </a>
+              </Link>{" "}
+              while its secondary role is in{" "}
+              <Link href="/#welfaresupport" scroll={true} legacyBehavior>
+                <a className="text-secondary font-semibold hover:text-accent">
+                  Welfare support
+                </a>
+              </Link>{" "}
+              . In the training support role, it develops the academic and
               intellectual endowments of naval personnel in support of naval
               operations. This is done through training in professional schools
               and Bases/Units In the welfare support role, the Directorate runs
