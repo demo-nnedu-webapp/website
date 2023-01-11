@@ -88,7 +88,7 @@ export const SecondarySchool = () => {
                     visit website
                   </a>
                 </Link>
-                <Link href="/buyform" passhref legacyBehavior>
+                <Link href="/admission" passhref legacyBehavior>
                   <a
                     className="text-center font-montserrat capitalize 
                   tracking-[0.09em] text-accent hover:text-secondary font-semibold"

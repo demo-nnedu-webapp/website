@@ -9,7 +9,7 @@ export const Action = () => {
       label: (
         <Link
           className="font-inter font-medium capitalize my-2 lg:my-0 tracking-[0.06em] text-primary"
-          href="/buyform"
+          href="/admission"
         >
           buy form
         </Link>
