@@ -106,6 +106,16 @@ export const Footer = () => {
                       className="font-montserrat tracking-[0.06em] font-normal
                      text-sm text-white hover:text-secondary"
                     >
+                      Get Form
+                    </a>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="#" passHref legacyBehavior>
+                    <a
+                      className="font-montserrat tracking-[0.06em] font-normal
+                     text-sm text-white hover:text-secondary"
+                    >
                       Admissions
                     </a>
                   </Link>

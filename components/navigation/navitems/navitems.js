@@ -47,7 +47,7 @@ export const Navitems = () => {
                 router.asPath === i.link
                   ? "text-secondary hover:underline font-medium"
                   : "text-primary"
-              } "font-inter font-normal capitalize my-2 lg:my-0 tracking-[0.06em] hover:text-[#dec918]`}
+              } "font-inter font-normal capitalize my-2 lg:my-0 tracking-[0.06em] hover:text-secondary`}
               onClick={() => dispatch(hidedropdown(mm))}
             >
               {i.label}
