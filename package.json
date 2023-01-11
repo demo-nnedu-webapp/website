@@ -13,6 +13,7 @@
     "@emotion/is-prop-valid": "^1.2.0",
     "@iconify/icons-ci": "^1.2.5",
     "@iconify/react": "^4.0.0",
+    "@plunk/node": "^0.0.7",
     "@reduxjs/toolkit": "^1.8.6",
     "antd": "^4.23.6",
     "eslint": "8.27.0",
