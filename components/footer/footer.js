@@ -101,7 +101,7 @@ export const Footer = () => {
                   Links
                 </h3>
                 <div>
-                  <Link href="#" passHref legacyBehavior>
+                  <Link href="/admission" passHref legacyBehavior>
                     <a
                       className="font-montserrat tracking-[0.06em] font-normal
                      text-sm text-white hover:text-secondary"
