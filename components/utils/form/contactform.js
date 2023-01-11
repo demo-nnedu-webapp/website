@@ -2,6 +2,7 @@ import { Form, Input, notification } from "antd";
 import React from "react";
 import styled from "styled-components";
 import { PrimaryButton } from "../../customButton/customButton";
+import { plunk } from "../../../lib/plunk";
 
 const { Item } = Form;
 
@@ -69,8 +70,17 @@ export const ContactForm = () => {
     });
   };
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     openNotification();
+
+    await plunk.events.publish({
+      event: "contact nnedu",
+      email: values.email,
+      data: {
+        message: values.message,
+      },
+    });
+
     console.log(values);
   };
 
