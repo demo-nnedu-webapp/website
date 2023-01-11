@@ -3,7 +3,6 @@ import Head from "next/head";
 import MapNNEDU from "../components/utils/map/map";
 import { SocialMedia } from "../components/utils/socials/social";
 import { ContactForm } from "../components/utils/form/contactform";
-import { EstablishmentSwipe } from "../components/utils/slider/slider";
 
 const Contact = () => {
   return (
