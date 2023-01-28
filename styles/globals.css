@@ -45,6 +45,13 @@ p {
   background-position: center center;
 }
 
+.backgroundAdmisiion {
+  background: linear-gradient(#00000061, #00000061),
+    url("../assets/okuraboyz.jpeg") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 textarea {
   padding: 0.75rem 1rem !important;
   border-radius: 0.375rem !important;
@@ -73,15 +80,6 @@ textarea:active {
   border: 2px solid #0074a8 !important;
   box-shadow: none !important;
 }
-
-/* #slider {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: blue;
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-} */
 
 .slide-in {
   animation: slide-in 0.5s forwards;
