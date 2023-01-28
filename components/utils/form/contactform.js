@@ -1,11 +1,41 @@
-import { Form, Input, notification } from "antd";
+import { notification } from "antd";
 import React from "react";
 import styled from "styled-components";
 import { PrimaryButton } from "../../customButton/customButton";
 
-const { Item } = Form;
+export const CustomInput = styled.input`
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  outline: none;
+  font-weight: 500;
+  color: #1f1839;
+  box-shadow: none;
+  background-color: white;
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 0.06em;
+  border: 1px solid #1f1839;
 
-const CustomInput = styled(Input)`
+  &:hover {
+    border: 2px solid #dec918;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border: 2px solid #0074a8;
+    box-shadow: none;
+
+    &:active {
+      border: 2px solid #0074a8;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background-color: #e8e8e8;
+    }
+  }
+`;
+export const CustomTextArea = styled.textarea`
   padding: 0.75rem 1rem;
   border-radius: 0.375rem;
   outline: none;
@@ -38,24 +68,7 @@ const CustomInput = styled(Input)`
   }
 `;
 
-const CustomItem = styled(Item)`
-  margin: 0;
-  color: #1f1839;
-
-  & .ant-form-item-label {
-    margin: 0;
-    margin-bottom: 6px;
-    font-family: inter;
-    letter-spacing: 0.06em;
-    font-weight: 500;
-    padding: 0;
-    color: #1f1839;
-  }
-`;
-
 export const ContactForm = () => {
-  const [form] = Form.useForm();
-
   const openNotification = () => {
     notification.open({
       message: <h3 className="font-inter text-white">Message sent</h3>,
@@ -69,30 +82,38 @@ export const ContactForm = () => {
     });
   };
 
-  const onFinish = async (values) => {
+  const onFinish = (e) => {
+    e.preventDefault();
     openNotification();
-
-    console.log(values);
   };
 
   return (
     <>
-      <Form layout="vertical" form={form} onFinish={onFinish}>
+      <form onSubmit={onFinish}>
         <div className="flex flex-col gap-4">
-          <CustomItem label="full name" name="fullname">
-            <CustomInput />
-          </CustomItem>
-          <CustomItem label="email" name="email">
-            <CustomInput />
-          </CustomItem>
-          <CustomItem label="message" name="message">
-            <CustomInput.TextArea rows={8} placeholder="message" />
-          </CustomItem>
+          <div>
+            <label htmlFor="fullname">fullname</label>
+            <CustomInput name="fullname" placeholder="full name" />
+          </div>
+
+          <div>
+            <label htmlFor="email">email</label>
+            <CustomInput name="email" placeholder="email" />
+          </div>
+
+          <div>
+            <label htmlFor="message">message</label>
+            <CustomTextArea
+              rows={8}
+              placeholder="message here"
+              name="message"
+            />
+          </div>
         </div>
         <div className="mt-5">
           <PrimaryButton type="submit">Send</PrimaryButton>
         </div>
-      </Form>
+      </form>
     </>
   );
 };

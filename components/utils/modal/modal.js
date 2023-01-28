@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { hideModal } from "../../../redux";
 
-export const Modals = ({ title, message, cancel, open }) => {
+export const Modals = ({ title, message, cancel, open, children }) => {
   const modal = useSelector((state) => state.locationReducer.modal);
   const dispatch = useDispatch();
 
@@ -21,6 +21,7 @@ export const Modals = ({ title, message, cancel, open }) => {
         footer=""
       >
         {message}
+        {children}
       </Modal>
     </>
   );

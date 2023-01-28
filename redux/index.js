@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  location: {},
   dropdownMenu: false,
   modal: false,
 };
