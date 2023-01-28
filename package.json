@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "nnedu_website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,6 +27,7 @@
     "react-dom": "18.2.0",
     "react-easy-marquee": "^1.2.4",
     "react-jotform-embed": "^1.1.2",
+    "react-paystack": "^4.0.2",
     "react-photo-album": "^1.16.1",
     "react-player": "^2.11.0",
     "react-redux": "^8.0.4",
