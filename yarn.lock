@@ -2754,6 +2754,11 @@ react-jotform-embed@^1.1.2:
   dependencies:
     core-js "^3.0.0"
 
+react-paystack@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/react-paystack/-/react-paystack-4.0.2.tgz#766bc52bcf885de84b24a08cb22c7e27606ce4c5"
+  integrity sha512-D5aLMOejrd7i9EXGWnDA1X/v8Uz6ei2pgb3ZwTT2daGRB8XtZ1CZCXENfr/6o/UDb2fGb0xbFiYSLge6cV1guQ==
+
 react-photo-album@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/react-photo-album/-/react-photo-album-1.16.1.tgz#46c9247326eafd5afc687b631459d45ba675f558"
