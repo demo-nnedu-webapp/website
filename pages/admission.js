@@ -54,7 +54,13 @@ const Admission = () => {
 
         </div> */}
       </div>
-      <>{modal && <Modals open={modal} children={<PurchaseForm />} />}</>
+      <>
+        {modal && (
+          <Modals open={modal}>
+            <PurchaseForm />
+          </Modals>
+        )}
+      </>
     </div>
   );
 };
