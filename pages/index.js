@@ -22,7 +22,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { hideModal, showModal } from "../redux";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Dropdown, Space } from "antd";
 import { Action } from "../components/utils/actions/action";
 
 export default function Home({ posts }) {
